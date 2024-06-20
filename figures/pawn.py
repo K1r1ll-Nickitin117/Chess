@@ -2,11 +2,14 @@ from base_figure import BaseFigure
 
 
 class Pawn(BaseFigure):
-    def __init_(self, row, col, color, symbol):
+    def __init_(self, row: int, col: int, color: int, symbol: str):
         self.color = color
         self.row = row
         self.col = col
         self.symbol = symbol
 
-    def can_move(self):
+    def can_move(self, row1: int, col1: int, row2: int, col2: int, color: int):
         """Описание логики хода фигуры"""
+        if row1 == row2 and abs(col2 - col1) == 1:
+            return True
+        return False

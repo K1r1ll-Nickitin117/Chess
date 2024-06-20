@@ -18,4 +18,3 @@ class PieceColor:
         return self.color_now == WHITE
 
 
-color = PieceColor(WHITE)
